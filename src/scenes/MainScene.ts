@@ -196,7 +196,7 @@ export default class MainScene extends Phaser.Scene {
 
   collectPlayerGround(playRun: any, platforms: any) {
     if (this.isJump) {
-      playRun?.play("IdleAnimation");
+      playRun?.play("IdleAnimation", true);
 
       this.isJump = false;
     }
@@ -242,9 +242,9 @@ export default class MainScene extends Phaser.Scene {
       this.playRun?.body.touching.down &&
       !this.isAttacking && this.playerHealthy > 0
     ) {
-      if (this.playRun?.anims.getName() !== "RunAnimation") {
-        this.playRun?.play("RunAnimation");
-      }
+    
+      this.playRun?.play("RunAnimation", true);
+    
 	  this.playRun.setScale(2, 2);
       this.playRun?.setVelocityX(120);
     } else if (
@@ -252,10 +252,9 @@ export default class MainScene extends Phaser.Scene {
       this.playRun?.body.touching.down &&
       !this.isAttacking && this.playerHealthy > 0
     ) {
-      if (this.playRun?.anims.getName() !== "RunAnimation") {
-        this.playRun?.play("RunAnimation");
-      }
-
+      
+      this.playRun?.play("RunLeftAnimation", true);
+      
       this.playRun?.setVelocityX(-120);
     } else if (this.playRun?.body.touching.down && !this.isAttacking && this.playerHealthy > 0) {
       if (this.playRun?.anims.getName() !== "IdleAnimation") {
@@ -268,6 +267,14 @@ export default class MainScene extends Phaser.Scene {
     if (Number(this.playRun?.body.velocity.y) > 0 && this.playerHealthy > 0) {
       this.playRun?.play("FallAnimation");
     }
+
+	if(this.cursor.up.isDown && !this.isJump) {
+		this.isJump = true;
+
+		this.playRun?.play("JumpAnimation", true);
+
+		this.playRun?.body.setVelocityY(-330);
+	}
 
     if (this.cursor.space.isDown && this.playRun?.body.touching.down && this.playerHealthy > 0) {
       this.playRun?.setVelocityX(0);
@@ -315,14 +322,26 @@ export default class MainScene extends Phaser.Scene {
     //Player
     const configPlayerRun = {
       key: "RunAnimation",
-      frames: this.anims.generateFrameNumbers("Run", {
+      frames: this.anims.generateFrameNames("Run", {
         start: 0,
         end: 7,
       }),
+	  
       frameRate: 8,
       repeat: -1,
     };
 
+	const configPlayerRunLeft = {
+		key: "RunLeftAnimation",
+		frames: this.anims.generateFrameNames("Run", {
+		  start: 8,
+		  end: 15,
+		}),
+		
+		frameRate: 8,
+		repeat: -1,
+	  };
+	
     const configPlayerFall = {
       key: "FallAnimation",
       frames: this.anims.generateFrameNumbers("Fall", {
@@ -337,7 +356,7 @@ export default class MainScene extends Phaser.Scene {
       key: "AttackAnimation",
       frames: this.anims.generateFrameNumbers("Attack1", {
         start: 0,
-        end: 5,
+        end: 11,
       }),
       frameRate: 20,
       repeat: 0,
@@ -373,15 +392,13 @@ export default class MainScene extends Phaser.Scene {
 		repeat: 0,
 	};
 
-	console.log(configPlayerDeath.frames);
-	
-
 	this.anims.create(configPlayerDeath);
     this.anims.create(configPlayerJump);
     this.anims.create(configPlayerIdle);
     this.anims.create(configPlayerAttack);
     this.anims.create(configPlayerRun);
     this.anims.create(configPlayerFall);
+	this.anims.create(configPlayerRunLeft);
   }
 
   createEnemyBehaviorAnimation() {
@@ -419,14 +436,11 @@ export default class MainScene extends Phaser.Scene {
       key: "EnemyAttackAnimation",
       frames: this.anims.generateFrameNumbers("EnemyAttack", {
         start: 0,
-        end: 3,
+        end: 7,
       }),
       frameRate: 8,
       repeat: 0,
     };
-
-	console.log(configEnemyAttack.frames);
-	
 
     this.anims.create(configEnemyIdle);
     this.anims.create(configEnemyRun);
@@ -562,10 +576,11 @@ export default class MainScene extends Phaser.Scene {
   }
 
   enemyMove() {
-    this.physics.moveToObject(
+    this.physics.moveTo(
       this.enemy as Phaser.Types.Physics.Arcade.SpriteWithDynamicBody,
-      this.playRun as Phaser.Types.Physics.Arcade.SpriteWithDynamicBody,
-      120
+	  (this.playRun as Phaser.Types.Physics.Arcade.SpriteWithDynamicBody).body.x,
+	  
+      500
     );
 
     if (!this.isBotAttacking) {

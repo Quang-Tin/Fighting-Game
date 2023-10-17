@@ -7,7 +7,7 @@
                     "frameWidth": 200,
                     "frameHeight": 160,
                     "startFrame": 0,
-                    "endFrame": 5,
+                    "endFrame": 11,
                     "spacing": 0,
                     "margin": 0
                 },
@@ -38,7 +38,7 @@
                     "frameWidth": 200,
                     "frameHeight": 160,
                     "startFrame": 0,
-                    "endFrame": 3,
+                    "endFrame": 7,
                     "spacing": 0,
                     "margin": 0
                 },
@@ -139,7 +139,7 @@
                     "frameWidth": 200,
                     "frameHeight": 160,
                     "startFrame": 0,
-                    "endFrame": 8,
+                    "endFrame": 15,
                     "spacing": 0,
                     "margin": 0
                 },

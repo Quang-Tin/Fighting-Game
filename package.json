@@ -9,9 +9,7 @@
     "build": "webpack --mode=production --node-env production && phaser-asset-pack-hashing -r dist",
     "editor": "phasereditor2d-launcher -project . -port 1959",
     "editor-remote": "phasereditor2d-launcher -project . -disable-open-browser -public -port 1959",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -r https://github.com/Quang-Tin/Fighting-Game.git"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Phaser Editor 2D <developers@phasereditor2d.com> (https://phasereditor2d.com/)",
   "license": "MIT",
