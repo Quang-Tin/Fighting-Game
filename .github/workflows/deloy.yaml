@@ -1,0 +1,9 @@
+name: fighting game
+on:
+  push:
+    branches: [main]
+jobs:
+  fighting-game:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run deploy
