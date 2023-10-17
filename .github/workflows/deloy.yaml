@@ -20,7 +20,7 @@ jobs:
         with:
           GITHUB_TOKEN: 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
           BRANCH: main # The branch the action should deploy to.
-          FOLDER: out
+          FOLDER: dist
 
 
 
