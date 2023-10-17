@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Phaser 3 project template for Phaser Editor 2D v3",
   "main": "webpack.config.js",
-  "homepage": "https://Quang-Tin.github.io.com/Fighting-Game/",
+  "homepage": "https://quang-Tin.github.io.com/Fighting-Game/",
   "scripts": {
     "start": "webpack serve --mode=development --stats-error-details --node-env development",
     "build": "webpack --mode=production --node-env production && phaser-asset-pack-hashing -r dist",
