@@ -1,0 +1,171 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/Attack1.png",
+                "frameConfig": {
+                    "frameWidth": 200,
+                    "frameHeight": 160,
+                    "startFrame": 0,
+                    "endFrame": 5,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Attack1"
+            },
+            {
+                "url": "assets/background.png",
+                "type": "image",
+                "key": "background"
+            },
+            {
+                "url": "assets/Death.png",
+                "frameConfig": {
+                    "frameWidth": 200,
+                    "frameHeight": 160,
+                    "startFrame": 0,
+                    "endFrame": 5,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Death"
+            },
+            {
+                "url": "assets/EnemyAttack.png",
+                "frameConfig": {
+                    "frameWidth": 200,
+                    "frameHeight": 160,
+                    "startFrame": 0,
+                    "endFrame": 3,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "EnemyAttack"
+            },
+            {
+                "url": "assets/EnemyDeath.png",
+                "frameConfig": {
+                    "frameWidth": 200,
+                    "frameHeight": 160,
+                    "startFrame": 0,
+                    "endFrame": 6,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "EnemyDeath"
+            },
+            {
+                "url": "assets/EnemyIdle.png",
+                "frameConfig": {
+                    "frameWidth": 200,
+                    "frameHeight": 160,
+                    "startFrame": 0,
+                    "endFrame": 3,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "EnemyIdle"
+            },
+            {
+                "url": "assets/EnemyRun.png",
+                "frameConfig": {
+                    "frameWidth": 200,
+                    "frameHeight": 160,
+                    "startFrame": 0,
+                    "endFrame": 7,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "EnemyRun"
+            },
+            {
+                "url": "assets/Fall.png",
+                "frameConfig": {
+                    "frameWidth": 200,
+                    "frameHeight": 160,
+                    "startFrame": 0,
+                    "endFrame": 1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Fall"
+            },
+            {
+                "url": "assets/FufuSuperDino.png",
+                "type": "image",
+                "key": "FufuSuperDino"
+            },
+            {
+                "url": "assets/Idle.png",
+                "frameConfig": {
+                    "frameWidth": 200,
+                    "frameHeight": 160,
+                    "startFrame": 0,
+                    "endFrame": 7,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Idle"
+            },
+            {
+                "url": "assets/Jump.png",
+                "frameConfig": {
+                    "frameWidth": 200,
+                    "frameHeight": 160,
+                    "startFrame": 0,
+                    "endFrame": 1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Jump"
+            },
+            {
+                "url": "assets/platform.png",
+                "type": "image",
+                "key": "platform"
+            },
+            {
+                "url": "assets/Run.png",
+                "frameConfig": {
+                    "frameWidth": 200,
+                    "frameHeight": 160,
+                    "startFrame": 0,
+                    "endFrame": 8,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Run"
+            },
+            {
+                "url": "assets/Shop.png",
+                "frameConfig": {
+                    "frameWidth": 118,
+                    "frameHeight": 128,
+                    "startFrame": 0,
+                    "endFrame": 5,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Shop"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}

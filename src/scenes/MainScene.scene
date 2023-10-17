@@ -1,0 +1,31 @@
+{
+    "id": "905a341d-8c8c-4e7e-85f7-8dc76c4c5c6a",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "MainScene",
+        "compilerOutputLanguage": "TYPE_SCRIPT"
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "f7ddcfe1-8474-484b-a9e6-8d9274e074a4",
+            "label": "background",
+            "texture": {
+                "key": "background"
+            },
+            "x": 403,
+            "y": 301
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}
