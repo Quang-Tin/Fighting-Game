@@ -37,7 +37,7 @@ window.addEventListener('load', function () {
 			default: 'arcade',
 			arcade: {
 				gravity: { y: 300 },
-				debug: true
+				debug: false
 			}
 		},
 		scene: [Boot, MainScene]
