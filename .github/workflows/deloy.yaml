@@ -15,4 +15,5 @@ jobs:
         run: npm ci
       - run: git config --global user.email "nlqtin@tma.com.vn"
       - run: git config --global user.name "Quang Tin"
+      - run: git remote add origin https://quang-tin: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@github.com/quang-tin/Fighting-Game.git
       - run: npm run deploy
